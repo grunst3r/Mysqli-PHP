@@ -6,7 +6,7 @@ Modo de usu del class en PHP.
 DB::_query("INSERT INTO tabla (campo1, campo2) VALUES  ('aaa','bbb') ");
 ```
 ```php
-if(DB::_query("INSERT INTO tabla (campo1, campo2) VALUES  ('aaa','bbb') "))
+if(DB::_query("INSERT INTO tabla (campo1, campo2) VALUES  ('aaa','bbb') "));
 ```
 ```php
 /* INSERT and insert_id */
