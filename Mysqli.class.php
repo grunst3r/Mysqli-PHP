@@ -1,27 +1,27 @@
 <?php 
 /**
- * @author Américo Allende M.
+ * @author AmÃ©rico Allende M.
  * @Version 0.3
  * @copyright Nicsmedia
- * PHP DB Mysqli - Clase para realizar la conexión a Mysql y realizar las consultas respectivas.
+ * PHP DB Mysqli - Clase para realizar la conexiÃ³n a Mysql y realizar las consultas respectivas.
  */
 
 class DB extends mysqli {
 
-	const MYSQL_SERVIDOR    = "localhost"; // Servidor ( localhost ó IP )
+	const MYSQL_SERVIDOR    = "localhost"; // Servidor ( localhost Ã³ IP )
     const MYSQL_USUARIO     = "taxisate_mysqli";  //Usuario de la Base de datos
-    const MYSQL_CLAVE       = "xyz123@";  //Contraseña de la Base de datos
+    const MYSQL_CLAVE       = "xyz123@";  //ContraseÃ±a de la Base de datos
     const MYSQL_BASEDATOS   = "taxisate_mysqli"; //Nombre de la Base de datos
 
     private static $instancia; 
       
-    private function __construct(){}
- 	private function __wake(){}
+    public function __construct(){}
+	private function __wake(){}
     private function __clone(){throw new Exception("Imposible clonear en la clase: ".__CLASS__);}
 
 
 	/**
-	* Método para establecer y realizar la conexión a la base de datos Mysql.
+	* MÃ©todo para establecer y realizar la conexiÃ³n a la base de datos Mysql.
 	* @access public static
 	* @return resource
 	*/
@@ -42,7 +42,7 @@ class DB extends mysqli {
     }
 
 	/**
-	* Método para establecer e invocar el recurso de una determinada consulta a Mysql.
+	* MÃ©todo para establecer e invocar el recurso de una determinada consulta a Mysql.
 	* @param string $query - Cadena de la consulta
 	* @access public static
 	* @return resource
@@ -61,8 +61,8 @@ class DB extends mysqli {
 	}
 
 	/**
-	* Método para mostrar los errores que arroja Mysql.
-	* @param object  $o - Objecto donde está almacenada el mensaje del error.
+	* MÃ©todo para mostrar los errores que arroja Mysql.
+	* @param object  $o - Objecto donde estÃ¡ almacenada el mensaje del error.
 	* @param boolean $i - booleano para mostrar el error completo (file and line).
 	* @access private static
 	* @return void
@@ -70,7 +70,7 @@ class DB extends mysqli {
 	private static function mostrarError($o, $i = true) {$msj = "MYSQL DICE: ".$o->getMessage();   if($i)echo($msj);else die($msj); }
 
 	/**
-	* Método para consultar el estado de la conexión a Mysql
+	* MÃ©todo para consultar el estado de la conexiÃ³n a Mysql
 	* @access public static
 	* @return boolean
 	*/
